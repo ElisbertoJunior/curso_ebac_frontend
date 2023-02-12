@@ -1,1 +1,2 @@
-Foi criada branch "exercicio_git" como pedido no exercicio.
+
+Foi criada branch "exercicio_git" como pedido no exercicio. 
