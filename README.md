@@ -1,4 +1,4 @@
-# Execicio - CSS
+# Exercicio - CSS
 
 Este é um pequeno site de noticias para execicio com CSS.
 
