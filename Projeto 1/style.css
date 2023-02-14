@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, input, textarea {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -15,14 +15,13 @@ header {
 
 }
 
-header h1,
-section h2 {
-  font-weight: normal;
-}
 
 header,
-section h2{
+section h2,
+section h3, 
+form button{
   font-family: 'Bungee', cursive;
+  font-weight: normal;
 }
 
 header nav li {
@@ -79,4 +78,65 @@ section p {
 
 store-front {
   margin-right: 32px;
+}
+
+.social-links img {
+  height: 24px;
+}
+
+.social-links li {
+  display: inline;
+  margin-right: 8px;
+}
+
+.social-links li a {
+  text-decoration: none;
+}
+
+#contact .container {
+  display: block;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input,
+textarea,
+button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+form textarea {
+  resize: none;
+  height: 180px;
+}
+
+section h3 {
+  margin-bottom: 16px;
+}
+
+form button {
+  background-color: #182c61;
+  color: #ecf0f1;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #314e9e;
+}
+
+input, textarea {
+  outline-color: #182c61;
+}
+
+footer{
+  background-color: #182c61;
+  color: #ecf0f1;
+  padding: 16px 0;
 }
