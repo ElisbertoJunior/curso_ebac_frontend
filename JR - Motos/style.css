@@ -192,3 +192,31 @@ form input, textarea, button {
   text-align: right;
   
 }
+
+.tel_contact > p {
+  text-align: right;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(196, 42, 42, 0.911);
+  margin-top: 30px;
+}
+
+.contact_container{
+  margin-bottom: 60px;
+}
+
+footer {
+  
+  background-color: rgb(44, 40, 61);
+  color: #ccc;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 40px 0;
+
+
+}
