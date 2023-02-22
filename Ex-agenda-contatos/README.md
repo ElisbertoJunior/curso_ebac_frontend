@@ -1,4 +1,4 @@
-# Agenda Web App
+# Exercicio Agenda
 
 This is a simple web app that allows users to add names and phone numbers to a table. It also displays the total number of items that have been added to the table in the footer.
 
