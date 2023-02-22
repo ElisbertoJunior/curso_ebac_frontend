@@ -17,3 +17,32 @@ header {
   font-style: italic;
 
 }
+
+form {
+  background-color: #c8d6e5;
+  padding: 24px 0;
+  text-align: center;
+  display: none;
+}
+
+form h2 {
+  margin-bottom: 16px;
+}
+
+input, button {
+  padding: 8px;
+}
+
+button {
+  background-color: #009432;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+#button-cancel {
+  background-color: red;
+}
