@@ -55,7 +55,7 @@ const updateTable = () => {
 const calcfinalMedia = () => {
  const soma = grades.reduce((acc, curretValue) => acc + curretValue);
  const media = soma / grades.length;
- return media.toFixed(1);
+ return media;
   
 }
   
@@ -67,7 +67,7 @@ const upateFinalMedia = () => {
   const tFootRow = `
       <tr>
         <td>Media final</td>
-        <td>${finalMedia}</td>
+        <td>${finalMedia.toFixed(2)}</td>
         <td>${finalMedia >= minGrade ? spanApproved : spanDisapproved}</td>
       </tr>
   `;
