@@ -5,6 +5,7 @@ const activities = [];
 const grades = [];
 const spanApproved = `<span class="result approved">Aprovado</span>`;
 const spanDisapproved = `<span class="result disapproved">Reprovado</span>`;
+const minGrade = parseFloat(prompt(`Digite qual será a nota minima para aprovação`));
 
 let row;
 
@@ -36,7 +37,7 @@ const addRow = () => {
   row += `<td>${inputNomeAtividade.value}</td>`;
   row += `<td>${inputNotaAtividade.value}</td>`;
   row += `<td>${
-    inputNotaAtividade.value >= 7 ? imgApproved : imgDisapproved
+    inputNotaAtividade.value >= minGrade ? imgApproved : imgDisapproved
   }</td>`;
   row += `</tr>`;
 
@@ -67,7 +68,7 @@ const upateFinalMedia = () => {
       <tr>
         <td>Media final</td>
         <td>${finalMedia}</td>
-        <td>${finalMedia >= 7 ? spanApproved : spanDisapproved}</td>
+        <td>${finalMedia >= minGrade ? spanApproved : spanDisapproved}</td>
       </tr>
   `;
 
