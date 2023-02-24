@@ -1,50 +1,15 @@
 $(document).ready(function () {
-  $("#carrosel-imagens").slick({
-    autoplay: true,
+ 
+  $("#telefone").mask('(00) 00000-0000', {
+    placeholder: '(00) 00000-0000'
   });
 
-  $('.menu-hamburger').click(function () {
-    $('nav').slideToggle();
+  $("#CPF").mask('000.000.000-00', {
+    placeholder: '000.000.000-00'
   });
 
-  $("#telefone").mask('(00) 00000-0000')
-
-  $("form").validate({
-    rules: {
-      nome: {
-        required: true
-      },
-      email: {
-        required: true,
-        email: true
-      },
-      telefone: {
-        required: true
-      },
-      messages: {
-        nome: 'Por favor insira deu nome!'
-      },
-      submitHandler: function(form){
-        console.log(form)
-      },
-      invalidHandler: function(event, validate){
-        let camposIncorretos = validate.numberOfInvalids();
-        if(camposIncorretos){
-          alert(`Existem ${camposIncorretos} compos incorretos!`)
-        }
-      }
-    }
-  });
-
-  $('.lista-veiculos button').click(function(){
-    const destino = $('#contato');
-    const nomeVeiculo = $(this).parent().find('h3').text();
-
-    $('#veiculo').val(nomeVeiculo);
-
-    $('html').animate({
-      scrollTop: destino.offset().top
-    }, 1000)
+  $("#CEP").mask('00000-000', {
+    placeholder: '00000-000'
   })
-
+  
 });
