@@ -266,46 +266,7 @@
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/messages_pt_BR.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $("#carrosel-imagens").slick({
-        autoplay: true,
-      });
-
-      $('.menu-hamburger').click(function () {
-        $('nav').slideToggle();
-      });
-
-      $("#telefone").mask('(00) 00000-0000')
-
-      $("form").validate({
-        rules: {
-          nome: {
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          telefone: {
-            required: true
-          },
-          messages: {
-            nome: 'Por favor insira deu nome!'
-          },
-          submitHandler: function(form){
-            console.log(form)
-          },
-          invalidHandler: function(event, validate){
-            let camposIncorretos = validate.numberOfInvalids();
-            if(camposIncorretos){
-              alert(`Existem ${camposIncorretos} compos incorretos!`)
-            }
-          }
-        }
-      });
-    });
-  </script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
