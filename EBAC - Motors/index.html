@@ -292,6 +292,15 @@
           },
           messages: {
             nome: 'Por favor insira deu nome!'
+          },
+          submitHandler: function(form){
+            console.log(form)
+          },
+          invalidHandler: function(event, validate){
+            let camposIncorretos = validate.numberOfInvalids();
+            if(camposIncorretos){
+              alert(`Existem ${camposIncorretos} compos incorretos!`)
+            }
           }
         }
       });
