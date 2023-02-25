@@ -17,13 +17,13 @@ body {
 
 header {
   background-color: #0b65cc;
-  
+
 }
 
 header .container {
   color: #FFF;
   display: flex;
-  padding: 1rem 0; 
+  padding: 1rem 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -32,7 +32,7 @@ header .container h1 {
   font-style: italic;
 }
 
-header .container ul  {
+header .container ul {
   display: flex;
   gap: 0.625rem;
 }
@@ -42,17 +42,17 @@ header .container ul li {
 
 }
 
-header .container ul li a{
+header .container ul li a {
   text-decoration: none;
   color: #FFF;
 }
 
-header .container ul li a:hover{
+header .container ul li a:hover {
   cursor: pointer;
   font-weight: bold;
 }
 
-#about > .container {
+#about>.container {
   display: flex;
   padding: 2rem 0;
   gap: 1.25rem;
@@ -123,14 +123,18 @@ header .container ul li a:hover{
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
-  #about > .container, 
+  header .container {
+    padding: 1rem 2rem;
+  }
+
+  #about>.container,
   .container {
     display: block;
     padding: 2rem;
     gap: 1.25rem;
-  
+
   }
-  
+
   #about img {
     width: 100%;
   }
@@ -138,11 +142,63 @@ header .container ul li a:hover{
   .secondary_title {
     margin-top: 1rem;
   }
-  
+
   #about p {
     margin-top: 1.875rem;
   }
 
+  .card_container {
+    display: inline-grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 640px) {
+  header .container {
+    padding: 1rem 2rem;
+  }
+
+  header .container ul {
+    padding: 1rem 2rem;
+    display: block;
+  }
+
   
 
+  #about>.container,
+  .container {
+    display: block;
+    padding: 2rem;
+    gap: 1.25rem;
+
+  }
+
+  #about img {
+    width: 100%;
+  }
+
+  .secondary_title {
+    margin-top: 1rem;
+  }
+
+  #about p {
+    margin-top: 1.875rem;
+  }
+
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
