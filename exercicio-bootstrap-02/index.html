@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+  <title>Exercicio Bootastrap Avancado</title>
+  <style>
+    .navbar-nav .nav-link.active {
+      color: #FFF;
+    }
+
+    .nav-link {
+      text-align: center;
+    }
+
+    #inicio img {
+      max-height: 900px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header id="cabecalho" class="sticky-top bg-white">
+          <div class="navbar navbar-expand-lg">
+            <h1>JR Motors</h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+              <ul class="nav nav-pills navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#carros">Carros</a>
+                </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="#contato">Contato</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+  
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+      <section id="inicio">
+        <div id="carousel-cars" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div data-bs-interval="5000" class="carousel-item active">
+              <img class="d-block w-100" src="./images/banner1.jpg">
+              <div class="carousel-caption">
+                <h2>Drift</h2>
+            </div>
+            </div>
+            <div data-bs-interval="5000" class="carousel-item">
+              <img class="d-block w-100" src="./images/banner2.jpg">
+              <div class="carousel-caption">
+                  <h2>Gran Turismo</h2>
+              </div>
+            </div>
+            <div data-bs-interval="5000" class="carousel-item">
+              <img class="d-block w-100" src="./images/banner3.jpg">
+              <div class="carousel-caption">
+                <h2>Muscle Car</h2>
+            </div>
+            </div>
+          </div>
+          <button data-bs-target="#carousel-cars" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button data-bs-target="#carousel-cars" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+          <div class="carousel-indicators">
+            <button type="button" class="active" data-bs-target="#carousel-cars" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel-cars" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-cars" data-bs-slide-to="2"></button>
+          </div>
+        </div>
+      </section>
+      <section class="pt-4 pb-4" id="carros">
+        <div class="container">
+          <h2 class="pb-3">Carros em estoque</h2>
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <img src="./images/banner2.jpg">
+                <div class="card-body">
+                  <h4 card-title>Ferrari 2022</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi distinctio similique.</p>
+                </div>
+                <footer class="card-footer d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                  <Strong>R$ 1.000.000,00</Strong>
+                </footer>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card mb-3">
+                <img src="./images/banner1.jpg">
+                <div class="card-body">
+                  <h4 card-title>Subaru 2022</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi distinctio similique.</p>
+                </div>
+                <footer class="card-footer d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                  <Strong>R$ 1.000.000,00</Strong>
+                </footer>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card mb-3">
+                <img src="./images/banner3.jpg">
+                <div class="card-body">
+                  <h4 card-title>Mustang 2022</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi distinctio similique.</p>
+                </div>
+                <footer class="card-footer d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                  <Strong>R$ 1.000.000,00</Strong>
+                </footer>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card mb-3">
+                <img src="./images/banner2.jpg">
+                <div class="card-body">
+                  <h4 card-title>Ferrari 2022</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi distinctio similique.</p>
+                </div>
+                <footer class="card-footer d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                  <Strong>R$ 1.000.000,00</Strong>
+                </footer>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card mb-3">
+                <img src="./images/banner2.jpg">
+                <div class="card-body">
+                  <h4 card-title>Ferrari 2022</h4>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi distinctio similique.</p>
+                </div>
+                <footer class="card-footer d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Ver mais</a>
+                  <Strong>R$ 1.000.000,00</Strong>
+                </footer>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section id="contato">
+        <div class="container">
+          <h2 class="mt-2 mb-2">Entre em contato</h2>
+          <form class="d-flex flex-column gap-3 w-75 mb-5">
+            <div>
+              <label class="form-label" for="nome">Seu nome:</label>
+              <input class="form-control " type="text" id="nome">
+            </div>
+            <div>
+              <label for="email" class="form-label">E-mail:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div>
+              <label for="mensagem" class="form-label">Sua mensagem:</label>
+              <textarea class="form-control" id="mensagem"></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </section> 
+  </div>
+  <footer class="d-flex justify-content-center align-items-center p-5">
+    <h5>Desenvolvido por Elisberto Junior</h5>
+  </footer>
+</div>
+  <script src="./libs/bootstrap.bundle.min.js"></script>
+  
+</body>
+
+</html>
