@@ -14,16 +14,16 @@
   <title>Document</title>
 </head>
 <body>
-  <header class="navbar navbar-expand-lg sticky-top p-4">
+  <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
     <div class="container">
-      <h1 class="navbar-brand m-0">Nome do Restaurante</h1>
+      <h1 class="navbar-brand m-0 section-title">Nome do Restaurante</h1>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
         <span class="navbar-toggler-icon"></span>
       </button>
       <nav id="menu-navegacao" class="navbar-collapse collapse justify-content-end">
         <ul class="nav nav-pills fw-bold d-block d-md-flex">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link" href="#sobre-restauarnte">
               <i class="bi bi-house-door me-1"></i>
               Sobre o restaurante
             </a>
@@ -50,6 +50,65 @@
       </nav>
     </div>
   </header>
+ <div data-bs-spy="scroll" data-bs-target="cabecalho">
+  <section id="sobre-restauarnte">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="./images/banner1.png">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/banner2.png">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/banner3.png">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+    <div class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="./images/banner1.png" class="d-block w-100 rounded">
+          </div>
+          <div class="col-md-7">
+            <h2 class="section-title">Sobre o <span>restaurante</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea et, animi placeat veritatis provident fugiat unde esse obcaecati pariatur dolores aliquam architecto necessitatibus illum. Inventore blanditiis tenetur perspiciatis numquam error!
+            </p>
+            <h3 class="section-title">Sobre o <span>espaco</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto itaque, voluptas aut ullam cupiditate, molestiae mollitia perspiciatis laboriosam exercitationem voluptatum similique amet recusandae assumenda quidem deserunt eaque voluptatibus officia repudiandae!
+            </p>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="eventos">
+    <div class="container">
+      <div class="row">
+        
+      </div>
+    </div>
+  </section>
+ </div>
 
   <script src="./libs/bootstrap.bundle.min.js"></script>
 </body>

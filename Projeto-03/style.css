@@ -6,9 +6,6 @@ body {
   background-color: #e15f41;
 }
 
-.navbar-brand {
-  font-family: 'Pacifico', cursive;
-}
 
 .nav .nav-link.active {
   background-color: #FFF;
@@ -23,5 +20,29 @@ body {
 
 .navbar-toggler {
   background-color: #ffeae6;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Pacifico', cursive;
+}
+
+.section-title span {
+  color: #e15f41;
+}
+
+#sobre-restauarnte {
+  background-color: #ffeae6;
+}
+
+@media screen and (min-width: 1400px) {
+  .carousel-item img {
+    height: 800px;
+    width: 100%;
+  }
 }
 
