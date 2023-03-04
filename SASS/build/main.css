@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.product {
+  background-color: green;
+}
+
+/*
+
+---Exemplo de primeira parte da aula VARIAVEIS
+
+$corPrincipal: #eee;
+$textHeader: #111;
+$colorHeader: rgb(140, 211, 240);
+
+body {
+  background-color: $corPrincipal;
+
+}
+
+header {
+  background-color: $colorHeader;
+
+  h1 {
+    color: $textHeader;
+  }
+
+}
+
+button {
+  padding: 16px;
+  background-color: $colorHeader;
+  color: $textHeader;
+
+  &:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+
+  &.sucesso {
+    background-color: green;
+  }
+
+}
+*/
+body {
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=main.css.map */
