@@ -1,0 +1,7 @@
+@use 'variables';
+body {
+  background-color: variables.$mainColor;
+  color: variables.$textColor;
+  text-align: center;
+  font-family: 'Segoe UI',sans-serif;
+}

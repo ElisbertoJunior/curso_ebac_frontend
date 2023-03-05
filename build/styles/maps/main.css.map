@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","variables.scss"],"names":[],"mappings":"AACA,KACE,iBCFU,QDGV,MCFU,KDGV,kBACA","file":"../main.css","sourcesContent":["@use 'variables';\r\nbody {\r\n  background-color: variables.$mainColor;\r\n  color: variables.$textColor;\r\n  text-align: center;\r\n  font-family: 'Segoe UI',sans-serif;\r\n}","$mainColor: #103646;\r\n$textColor: #FFF;"]}
