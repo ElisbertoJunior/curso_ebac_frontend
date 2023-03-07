@@ -7,6 +7,23 @@
 body {
   background-color: #f5f6fa;
 }
+@media (max-width: 1023px) {
+  body .container {
+    max-width: 80%;
+  }
+  body .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+@media (max-width: 767px) {
+  body .products {
+    display: block;
+  }
+  body .product-item {
+    margin-bottom: 32px;
+  }
+}
 li {
   list-style: none;
 }
