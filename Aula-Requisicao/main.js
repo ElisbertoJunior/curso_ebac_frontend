@@ -13,10 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 
 $(document).ready(function () {
+  $('#cep').mask('00000-000');
+  
   $("#btn-search-cep").click(function () {
     const cep = $("#cep").val();
     const endpoint = `https://viacep.com.br/ws/${cep}/json`;
-    $(this).find()
+    const button = $(this);
+
+    $(button).find('i').addClass('d-none');
+    $(button).find('span').removeClass('d-none');
 
     $.ajax(endpoint).done(function (res) {
       const { logradouro, bairro, localidade, uf } = res;
@@ -24,6 +29,13 @@ $(document).ready(function () {
       const address = `${logradouro}, ${bairro}, ${localidade}, ${uf}`;
 
       $("#address").val(address);
+
+      setTimeout(function() {
+        $(button).find('i').removeClass('d-none');
+        $(button).find('span').addClass('d-none');
+      }, 1000);
+
+      
     });
   });
 });
