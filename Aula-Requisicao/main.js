@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 */
 
+// Utilizando JQuery 
+/*
 $(document).ready(function () {
   $('#cep').mask('00000-000');
   
@@ -34,8 +36,24 @@ $(document).ready(function () {
         $(button).find('i').removeClass('d-none');
         $(button).find('span').addClass('d-none');
       }, 1000);
+      /////////
+
+
+      //Utilizando fetch
+      fetch(endpoint)
+        .then((res) => {
+          return res.json();
+        }).then((json) => {
+          console.log(json);
+          const { logradouro, bairro, localidade, uf } = json;
+
+          const address = `${logradouro}, ${bairro}, ${localidade}, ${uf}`;
+          $("#address").val(address);
+        })
+
 
       
     });
   });
 });
+*/
