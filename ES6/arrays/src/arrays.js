@@ -6,12 +6,7 @@
 
 const alunos = ["Zezin", "Joaozin", "Marcelin", "Joca"];
 
-const alunos2 = alunos.map(aluno => {
-  return {
-    name: aluno,
-    curso: 'Full-stack'
-  }
-});
+const alunos2 = alunos.map(aluno => ({ name: aluno, curso: 'Full-stack'}));
 
 console.log(alunos2);
 
