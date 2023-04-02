@@ -19,6 +19,8 @@ const state = reactive({
   email: '',
   balance: 5000,
   transferring: 0,
+  names: ['Joao', 'Zeze', 'Maria'],
+  nameToInsert: ''
 });
 
 const increment = () => {
@@ -39,8 +41,14 @@ const showBackBalance = () => {
   const backBalance = balance - transferring;
 
   return backBalance >= 0 ? backBalance : `Saldo insuficiente para concluir transacao`;
-
 };
+
+const insertName = () => {
+  const { names, nameToInsert } = state;
+
+  nameToInsert.length >= 3 ? 
+    names.push(nameToInsert) : alert("Nome deve conter pelo menos 3 caracteres...");
+}
 
 </script>
 
@@ -54,7 +62,7 @@ const showBackBalance = () => {
   <h1 v-if="estaAutorizado">Bem vindo</h1>
   <h1 v-else>Nao tem acesso</h1>
 
-  <button :disabled="!btnDisabled">Enviar</button>
+  <button :disabled="btnDisabled">Enviar</button>
 
 
   <hr>
@@ -80,6 +88,17 @@ const showBackBalance = () => {
     <p v-bind:class="{ invalid: state.transferring > state.balance }"> Saldo depois da transferencia: {{ showBackBalance() }}</p>
     <input v-bind:class="{ invalid: state.transferring > state.balance }" type="number" @keyup="insertTransferValue" placeholder="Quatia a tranferir">
   </div>
+
+
+  <hr>
+
+  <ul>
+    <li v-for="name in state.names">
+      {{ name }}
+    </li>
+  </ul>
+  <input @keyup="event => state.nameToInsert = event.target.value" type="text" placeholder="Digite um novo nome">
+  <button @click="insertName" type="button">Adicionar nome</button>
 </template>
 
 <style scoped>
