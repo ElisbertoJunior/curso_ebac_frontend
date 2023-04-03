@@ -2,6 +2,9 @@
 <script setup>
 
   import { reactive } from 'vue';
+  import CabecalhoInicial from './components/CabecalhoInicial.vue';
+  import FormPrinc  from './components/FormPrinc.vue';
+  import ListaDeTarefas from './components/ListaDeTarefas.vue'
 
   const states = reactive({
     filter: 'todas',
@@ -14,7 +17,7 @@
       },
       {
         title: 'Estudar React',
-        finished: true,
+        finished: false,
       },
 
     ]
@@ -55,37 +58,9 @@
 
 <template>
   <div class="container">
-    <header class="p-5 mb-4 mt-4 bg-light rounded-3">
-      <h1>Minhas tarefas</h1>
-      <p>
-        Voce possui {{ getPendingTasks().length }} tarefas pendentes
-      </p>
-    </header>
-    <form @submit.prevent="registerTask">
-      <div class="row">
-        <div class="col">
-          <input :value="states.tempTask" @change="event => states.tempTask = event.target.value" required type="text" class="form-control" placeholder="Digite aqui a descricao da tarefa">
-        </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </div>
-        <div class="col-md-2">
-          <select class="form-control" @change="event => states.filter = event.target.value">
-            <option class="form-control" value="todas">Todas tarefas</option>
-            <option class="form-control" value="pendentes">Pendentes</option>
-            <option class="form-control" value="finalizadas">Finalizadas</option>
-          </select>
-        </div>
-      </div>
-    </form>
-    <ul class="list-group mt-4">
-      <li v-for="task in getFilterTasks()" class="list-group-item">
-        <input @change="event => task.finished = event.target.checked" :checked="task.finished" :id="task.title" type="checkbox">
-        <label :class="{ done: task.finished === true }" class="ms-3" :for="task.title">
-          {{ task.title }}
-        </label>
-      </li>
-    </ul>
+   <CabecalhoInicial :get-pending-tasks="getPendingTasks().length"/>
+   <FormPrinc :handle-filter="event => states.filter = event.target.value" :temp-task="states.tempTask" :edit-task="event => states.tempTask = event.target.value" :register-task="registerTask"/>
+   <ListaDeTarefas :tasks="getFilterTasks()"/>
   </div>
 </template>
 
