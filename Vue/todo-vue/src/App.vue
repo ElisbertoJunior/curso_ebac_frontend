@@ -5,6 +5,7 @@
 
   const states = reactive({
     filter: 'todas',
+    tempTask: '',
 
     tasks: [
       {
@@ -40,6 +41,16 @@
     }
   }
 
+  const registerTask = () => {
+    const register = {
+      title: states.tempTask,
+      finished: false
+    }
+
+    states.tasks.push(register);
+    states.tempTask = '';
+  }
+
 </script>
 
 <template>
@@ -50,10 +61,10 @@
         Voce possui {{ getPendingTasks().length }} tarefas pendentes
       </p>
     </header>
-    <form>
+    <form @submit.prevent="registerTask">
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Digite aqui a descricao da tarefa">
+          <input :value="states.tempTask" @change="event => states.tempTask = event.target.value" required type="text" class="form-control" placeholder="Digite aqui a descricao da tarefa">
         </div>
         <div class="col-md-2">
           <button type="submit" class="btn btn-primary">Cadastrar</button>
