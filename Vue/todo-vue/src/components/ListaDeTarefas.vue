@@ -15,3 +15,9 @@
       Nao existem tarefas para mostrar
     </p>
 </template>
+
+<style scoped>
+  .done {
+    text-decoration: line-through;
+  }
+</style>
