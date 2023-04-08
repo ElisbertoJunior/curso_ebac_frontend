@@ -35,13 +35,7 @@ const Form = () => {
 
   return (
     <form>
-      <ul>
-        {[1, 2, 3, 4, 5].map(item => (
-          <>
-            <li key={item}>{item}</li>
-          </>
-        ))}
-      </ul>
+     
 
       <input type="text" placeholder='Seu nome' onChange={changeName}/>
       <input type="number" placeholder='Nota materia A' onChange={event => setMateriaA(parseInt(event.target.value))}/>

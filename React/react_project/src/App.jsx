@@ -6,12 +6,18 @@ import RepoList from "./components/RepoList";
 
 const App = () => {
   const [formVisible, setFormVisible] = useState(false); 
-  
+  const [userName, setUserName] = useState('');
   
   return (
     <div className="App">
-      <Header name="Elisberto Junior" address="https://github.com/ElisbertoJunior.png"/>
-      <RepoList />
+      <input onBlur={({target}) => setUserName(target.value)} type="text" placeholder="Digite o usuario"/>
+      
+      {userName.length > 4 &&(
+       <>
+         <Header username={userName}/>
+          <RepoList username={userName} />
+       </>
+      )}
       
        {/* {formVisible && (
         <Form/>

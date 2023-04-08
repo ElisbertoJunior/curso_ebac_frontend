@@ -1,13 +1,16 @@
 import React from 'react'
-import  './header.css'
+import styles from './Header.module.css'
 
-const Header = ({ address, name }) => {
+
+const Header = ({  username }) => {
   //const { address, name } = props;
   return (
-    <div>
-      <img className='img-perfil' src={address}/>
-      <h3 className='prefil-title'>{name}</h3>
-    </div>
+    <header className={styles.header}>
+      <img className={styles.avatar} src={`https://github.com/${username}.png`}/>
+      <h1 className={styles.name}>
+        {username}
+      </h1>
+    </header>
   )
 }
 
